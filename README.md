@@ -47,13 +47,14 @@ new_form_2 = {
     "order_date": "date",
 }
 
-you can get post your form data as order_email=test@test.com&phone=%2B7 999 999 99 99
+you can get post your form data as "order_email=test@test.com&phone=%2B7 999 999 99 99"
 and get "new_form_2" as best form template.
 
 If there is no template with at least one same pair "field-value" you will have
 {
     f_name1: FIELD_TYPE,
-    f_name2: FIELD_TYPE
+    f_name2: FIELD_TYPE,
+    ...
 }
 
 as answer.
@@ -81,14 +82,14 @@ as answer.
 
    The script with make and run containers with scrapper and db, make contaners network.
    If you already have this containers, script will destroy containers and network.
-   After this, script will make three form templates while sinding data:
+   After this, script will make three form templates while sending data:
 
     "name=form_name3&order_email=email&phone=phone&order_date=date"
     "name=form_name2&order_email=email&order_phone=phone&order_date=date"
     "name=form_name&email=email&phone=phone&date=date"
 
    Then, script make requests to get best templates four times. One for each template and one with no template.
-   After this you can see all form templates in db.
+   After this you will see all form templates in db.
 
    - Also, you can use "http://localhost:8000/docs#/" to test app with another data.
 
