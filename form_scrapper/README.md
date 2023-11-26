@@ -72,7 +72,7 @@ as answer.
 
    - Clone this repo
 
-   - Go to directory with test_script.sh
+   - Go to directory with test_script.sh "cd form_scrapper/form_scrapper/"
 
    - Run "bash test_script.sh"
 
