@@ -70,7 +70,7 @@ as answer.
 
    For deploy:
 
-   - Clone this repo
+   - Fork this repo
 
    - Install Docker
 
