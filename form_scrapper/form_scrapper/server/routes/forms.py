@@ -2,7 +2,7 @@ from urllib import parse as urlparse
 
 from core.form_maker import find_document, insert_document
 from fastapi import APIRouter
-from form_scrapper.server.database import forms_collection
+from form_scrapper.server.database import forms_collection, retrieve_forms
 
 router = APIRouter()
 
@@ -12,6 +12,12 @@ def get_template_data(form):
     form = dict(urlparse.parse_qsl(form))
     template = find_document(forms_collection, form)
     return template
+
+
+@router.get("/templates", response_description="All templates")
+def get_templates():
+    templates = retrieve_forms()
+    return templates
 
 
 @router.post("/post_template", response_description="Make form teplate")

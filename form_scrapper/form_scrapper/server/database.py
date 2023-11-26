@@ -1,13 +1,14 @@
 import pymongo
 
+client = pymongo.MongoClient("mongodb://mongodb")
+db = client["form_scrapper"]
+forms_collection = db["forms"]
 
-client = pymongo.MongoClient('mongodb://mongodb')
-db = client['form_scrapper']
-forms_collection = db['forms']
 
-
-async def retrieve_forms():
+def retrieve_forms():
     forms = []
-    async for form in forms_collection.find():
+    template = forms_collection.find()
+    for form in template:
+        form["_id"] = str(form["_id"])
         forms.append(form)
     return forms

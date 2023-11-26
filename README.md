@@ -25,8 +25,9 @@ The following technologies were used in the development of this application:
 
 ## Project functionality
 
-The user can add form templates at andpoint /forms/post_template and after this post search data
-at endpoint /forms/get_form and get best form template for his form.
+The user can add form templates at andpoint "/forms/post_template" and after this post search data
+at endpoint "/forms/get_form" and get best form template for his form.
+At endpoint "/forms/templates" user can get all rom templates.
 
 For example: if you have
 
@@ -87,6 +88,7 @@ as answer.
     "name=form_name&email=email&phone=phone&date=date"
 
    Then, script make requests to get best templates four times. One for each template and one with no template.
+   After this you can see all form templates in db.
 
    - Also, you can use "http://localhost:8000/docs#/" to test app with another data.
 
