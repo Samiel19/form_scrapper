@@ -1,4 +1,4 @@
-# form_scrapper
+# FormScrapperApp
 App for scrapping forms
 
 
