@@ -27,7 +27,7 @@ The following technologies were used in the development of this application:
 
 The user can add form templates at andpoint "/forms/post_template" and after this post search data
 at endpoint "/forms/get_form" and get best form template for his form.
-At endpoint "/forms/templates" user can get all rom templates.
+At endpoint "/forms/templates" user can get all templates.
 
 For example: if you have
 
